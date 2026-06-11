@@ -4,42 +4,131 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Support — Praxis</title>
+<meta name="description" content="Support and contact for Praxis, a product of GS Digital Inc.">
 <style>
-  :root{--bg:#0A0F1E;--surface:#111A30;--ink:#FFFFFF;--muted:#9AAACB;--dim:#5E6E8F;--accent:#5B9BD5;--line:rgba(255,255,255,.07)}
+  :root{
+    --bg:#0A0F1E;--surface:#111A30;--line:rgba(255,255,255,.07);
+    --line-bright:rgba(91,155,213,.35);--ink:#FFFFFF;--muted:#9AAACB;
+    --dim:#5E6E8F;--accent:#5B9BD5;--accent-bright:#4D8DF0;
+  }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.65}
-  .wrap{max-width:760px;margin:0 auto;padding:0 24px 96px}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.6;
+  }
+  .glow{position:fixed;inset:auto 0 0 0;height:50vh;pointer-events:none;z-index:0;
+    background:radial-gradient(ellipse 90% 100% at 50% 110%, rgba(77,141,240,.18), transparent 70%);}
+  .wrap{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 24px}
   nav{display:flex;align-items:center;justify-content:space-between;padding:28px 0}
   .wordmark{font-size:15px;font-weight:700;letter-spacing:.35em;color:var(--accent);text-decoration:none}
-  nav a.back{color:var(--dim);text-decoration:none;font-size:14px}
-  nav a.back:hover{color:var(--muted)}
-  h1{font-size:34px;font-weight:800;letter-spacing:-.02em;margin:48px 0 28px}
-  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px;margin-bottom:16px}
-  .card h2{font-size:17px;font-weight:700;margin-bottom:6px}
-  .card p{color:var(--muted);font-size:15px}
-  .card a{color:var(--accent);text-decoration:none}
-  .card a:hover{text-decoration:underline}
+  nav a.back{color:var(--muted);text-decoration:none;font-size:14px;border:1px solid var(--line);border-radius:30px;padding:9px 18px;transition:color .2s,border-color .2s}
+  nav a.back:hover{color:var(--ink);border-color:var(--accent)}
+
+  header.page{padding:64px 0 12px}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  header.page h1{font-size:clamp(34px,6vw,52px);font-weight:800;letter-spacing:-.02em;margin-top:14px}
+  header.page p{margin-top:16px;font-size:17px;color:var(--muted);max-width:560px}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;margin-top:22px}
+  .card h2{font-size:18px;font-weight:700}
+  .card p{margin-top:10px;font-size:15px;color:var(--muted)}
+  .card a.email{color:var(--accent);text-decoration:none;font-weight:600}
+  .card a.email:hover{color:var(--accent-bright)}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px 40px;margin-top:6px}
+  .meta-row div{margin-top:14px}
+  .meta-row .l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);font-weight:700}
+  .meta-row .v{font-size:15px;color:var(--ink);margin-top:4px}
+
+  .faq{margin-top:40px}
+  .faq h3{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);font-weight:700;margin-bottom:14px}
+  .q{border-top:1px solid var(--line);padding:20px 0}
+  .q .question{font-size:16px;font-weight:600}
+  .q .answer{margin-top:8px;font-size:15px;color:var(--muted)}
+
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:32px 0 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+  .footer-left{display:flex;flex-direction:column;gap:6px}
+  .fm{font-size:12px;letter-spacing:.3em;color:var(--dim);font-weight:700}
+  .copyright{font-size:12px;color:var(--dim)}
+  footer .links{display:flex;gap:22px}
+  footer a{color:var(--dim);text-decoration:none;font-size:13px}
+  footer a:hover{color:var(--muted)}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
+<div class="glow" aria-hidden="true"></div>
 <div class="wrap">
+
   <nav>
     <a class="wordmark" href="/">PRAXIS</a>
-    <a class="back" href="/">&larr; Back</a>
+    <a class="back" href="/">← Back to home</a>
   </nav>
-  <h1>Support</h1>
+
+  <header class="page">
+    <div class="eyebrow">Support</div>
+    <h1>We're here to help.</h1>
+    <p>Praxis is built and maintained by GS Digital Inc. For any question, bug, billing issue, or account request, reach out and we'll get back to you.</p>
+  </header>
+
   <div class="card">
     <h2>Contact us</h2>
-    <p>Questions, bugs, or feedback — email <a href="mailto:hello@runpraxis.app">hello@runpraxis.app</a>. We read everything and usually reply within 24 hours.</p>
+    <p>Email us directly and we'll respond within 1–2 business days.</p>
+    <p style="margin-top:14px"><a class="email" href="mailto:genti@runpraxis.app">genti@runpraxis.app</a></p>
   </div>
+
   <div class="card">
-    <h2>Subscriptions &amp; billing</h2>
-    <p>Subscriptions are handled by Apple. You can manage or cancel anytime in your device Settings &rarr; Apple ID &rarr; Subscriptions.</p>
+    <h2>Company</h2>
+    <p>Praxis is a product of GS Digital Inc, a company registered in Ontario, Canada.</p>
+    <div class="meta-row">
+      <div>
+        <div class="l">Company</div>
+        <div class="v">GS Digital Inc</div>
+      </div>
+      <div>
+        <div class="l">Jurisdiction</div>
+        <div class="v">Ontario, Canada</div>
+      </div>
+      <div>
+        <div class="l">Support email</div>
+        <div class="v">genti@runpraxis.app</div>
+      </div>
+    </div>
   </div>
-  <div class="card">
-    <h2>About Praxis</h2>
-    <p>Praxis is an education and habit-execution tool. It is not medical advice. Consult a healthcare professional before making significant changes to your health routine.</p>
-  </div>
+
+  <section class="faq">
+    <h3>Common questions</h3>
+    <div class="q">
+      <div class="question">When does Praxis launch?</div>
+      <div class="answer">Praxis is launching on iOS. Join the waitlist on the home page and we'll email you the day it goes live.</div>
+    </div>
+    <div class="q">
+      <div class="question">How do I manage or cancel my subscription?</div>
+      <div class="answer">Subscriptions are billed through your Apple ID. You can view, change, or cancel anytime in iOS Settings → your name → Subscriptions. Cancelling stops future renewals; access continues until the end of the current period.</div>
+    </div>
+    <div class="q">
+      <div class="question">Is Praxis medical advice?</div>
+      <div class="answer">No. Praxis is an educational protocol library, not medical advice. Talk to a qualified healthcare professional before making significant changes to your health routine.</div>
+    </div>
+    <div class="q">
+      <div class="question">How do I delete my account and data?</div>
+      <div class="answer">Email genti@runpraxis.app from your account address and we'll permanently delete your account and associated data.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-left">
+      <div class="fm">PRAXIS</div>
+      <div class="copyright">© 2026 GS Digital Inc</div>
+    </div>
+    <div class="links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+
 </div>
 </body>
 </html>
